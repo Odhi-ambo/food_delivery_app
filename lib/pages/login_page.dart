@@ -1,20 +1,50 @@
+import 'package:delivery_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login Page'),
-      ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/home');
-          },
-          child: const Text('Login'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //logo
+
+            Icon(
+              Icons.lock_open_rounded,
+              size: 100,
+              color: Theme.of(context).colorScheme.inversePrimary,
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Text(
+              'Food Delivery App',
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+
+            //textfiled
+            MyTextField(
+              controller: emailController,
+              hintText: 'Email',
+              obscureText: false,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+          ],
         ),
       ),
     );
