@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/my_button.dart';
 import 'package:delivery_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -44,6 +45,18 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
+            MyTextField(
+              controller: passwordController,
+              hintText: 'Password',
+              obscureText: true,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            MyButton(
+              text: 'Sign In',
+              onTap: () {},
+            )
           ],
         ),
       ),
