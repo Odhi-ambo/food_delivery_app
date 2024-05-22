@@ -2,10 +2,18 @@ import 'package:delivery_app/components/my_button.dart';
 import 'package:delivery_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  final void Function() onTap;
+  const LoginPage({super.key, required this.onTap});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
-  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +34,7 @@ class LoginPage extends StatelessWidget {
               height: 25,
             ),
             Text(
-              'Food Delivery App',
+              'Let' 's sign you in',
               style: TextStyle(
                   color: Theme.of(context).colorScheme.inversePrimary,
                   fontSize: 16,
@@ -56,6 +64,31 @@ class LoginPage extends StatelessWidget {
             MyButton(
               text: 'Sign In',
               onTap: () {},
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Not a member? ',
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                GestureDetector(
+                  onTap: widget.onTap,
+                  child: Text(
+                    'Register now',
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             )
           ],
         ),
