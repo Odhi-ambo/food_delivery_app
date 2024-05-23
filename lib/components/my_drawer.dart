@@ -1,4 +1,5 @@
 import 'package:delivery_app/components/my_drawer_tile.dart';
+import 'package:delivery_app/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -27,12 +28,20 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: 'HOME',
             icon: Icons.home,
-            onTap: () {},
+            onTap: () => Navigator.pop(context),
           ),
           MyDrawerTile(
             text: 'SETTINGS',
             icon: Icons.settings,
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingsPage(),
+                ),
+              );
+            },
           ),
           const Spacer(),
           MyDrawerTile(
