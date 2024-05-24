@@ -20,8 +20,8 @@ class SettingsPage extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondary,
                 borderRadius: BorderRadius.circular(12)),
-            margin: EdgeInsets.only(top: 10, right: 25, left: 25),
-            padding: EdgeInsets.all(25),
+            margin: const EdgeInsets.only(top: 10, right: 25, left: 25),
+            padding: const EdgeInsets.all(25),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
