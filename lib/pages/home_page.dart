@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:delivery_app/components/my_current_location.dart';
 import 'package:delivery_app/components/my_description_box.dart';
 import 'package:delivery_app/components/my_drawer.dart';
 import 'package:delivery_app/components/my_sliver_app_bar.dart';
-import 'package:flutter/material.dart';
+import 'package:delivery_app/components/my_tab_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,7 +12,22 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           MySliverAppBar(
-            title: const Text('title'),
+            title: MyTabBar(tabController: _tabController), // Corrected here
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
