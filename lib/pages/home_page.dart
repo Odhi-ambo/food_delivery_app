@@ -33,27 +33,41 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       drawer: const MyDrawer(),
       body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          MySliverAppBar(
-            title: MyTabBar(tabController: _tabController), // Corrected here
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Divider(
-                  indent: 25,
-                  endIndent: 25,
-                  color: Theme.of(context).colorScheme.secondary,
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                MySliverAppBar(
+                  title:
+                      MyTabBar(tabController: _tabController), // Corrected here
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Divider(
+                        indent: 25,
+                        endIndent: 25,
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      const MyCurrentLocation(),
+                      const MyDescriptionBox(),
+                    ],
+                  ),
                 ),
-                const MyCurrentLocation(),
-                const MyDescriptionBox(),
               ],
-            ),
-          ),
-        ],
-        body: Container(
-          color: Colors.amber,
-        ),
-      ),
+          body: TabBarView(
+            controller: _tabController,
+            children: [
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => const Text('First tab items'),
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => const Text('Second tab items'),
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => const Text('Third tab items'),
+              ),
+            ],
+          )),
     );
   }
 }
