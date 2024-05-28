@@ -2,7 +2,7 @@ class Food {
   final String name;
   final String description;
   final String imagePath;
-  final String price;
+  final int price;
   final FoodCategory category;
   List<Addon> availableAddons;
 
@@ -17,7 +17,7 @@ class Food {
 }
 
 enum FoodCategory {
-  burgers,
+  dishi,
   salads,
   sides,
   desserts,
