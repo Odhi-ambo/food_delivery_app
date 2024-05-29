@@ -5,8 +5,8 @@ class Restaurant extends ChangeNotifier {
   final List<Food> menu = [
     //dishi
     Food(
-      name: 'Chapo dondo',
-      description: 'chapo imekatatanishwa smart',
+      name: 'Mandazi surwa',
+      description: 'Mandazi imekatanishwa na utamu',
       imagePath: 'lib/images/dishi/download (3).jfif',
       price: 100,
       category: FoodCategory.dishi,
@@ -17,7 +17,7 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'Chapo dondo',
-      description: 'chapo imekatatanishwa smart',
+      description: 'none like chapo madondo',
       imagePath: 'lib/images/dishi/download (5).jfif',
       price: 100,
       category: FoodCategory.dishi,
@@ -27,10 +27,10 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
     Food(
-      name: 'Chapo surwa',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
-      price: 100,
+      name: 'Burger king',
+      description: 'burger as delicious as you.',
+      imagePath: 'lib/images/dishi/download (1).jfif',
+      price: 150,
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
@@ -63,8 +63,8 @@ class Restaurant extends ChangeNotifier {
     //salads
     Food(
       name: 'tam tam',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'vitu tamu tamu kama wewe',
+      imagePath: 'lib/images/salads/download (1).jfif',
       price: 100,
       category: FoodCategory.salads,
       availableAddons: [
@@ -73,9 +73,9 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
     Food(
-      name: 'vitu smart smart',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      name: 'House delicacy',
+      description: 'You' + 'll love it',
+      imagePath: 'lib/images/salads/download (2).jfif',
       price: 100,
       category: FoodCategory.salads,
       availableAddons: [
@@ -85,8 +85,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'real deal',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'Soo sweet!',
+      imagePath: 'lib/images/salads/download (3).jfif',
       price: 100,
       category: FoodCategory.salads,
       availableAddons: [
@@ -96,8 +96,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'pure sweetness',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'The usual sweet',
+      imagePath: 'lib/images/salads/download (4).jfif',
       price: 100,
       category: FoodCategory.salads,
       availableAddons: [
@@ -107,8 +107,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'pure greatness',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'African delicacy',
+      imagePath: 'lib/images/salads/download.jfif',
       price: 100,
       category: FoodCategory.salads,
       availableAddons: [
@@ -120,8 +120,8 @@ class Restaurant extends ChangeNotifier {
     //sides
     Food(
       name: 'kapolite',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'You' 'll want more',
+      imagePath: 'lib/images/sides/download (3).jfif',
       price: 100,
       category: FoodCategory.sides,
       availableAddons: [
@@ -131,8 +131,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'eazy peazy',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'One for the road',
+      imagePath: 'lib/images/sides/download.jfif',
       price: 100,
       category: FoodCategory.sides,
       availableAddons: [
@@ -142,8 +142,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'wacha uchekwe',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'Utapenda ya kipwani',
+      imagePath: 'lib/images/sides/images (1).jfif',
       price: 100,
       category: FoodCategory.sides,
       availableAddons: [
@@ -153,8 +153,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'deal breaker',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'If not this, what else!',
+      imagePath: 'lib/images/sides/images (2).jfif',
       price: 100,
       category: FoodCategory.sides,
       availableAddons: [
@@ -164,8 +164,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'vile inafaa',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'lemme have another one',
+      imagePath: 'lib/images/sides/images.jfif',
       price: 100,
       category: FoodCategory.sides,
       availableAddons: [
@@ -177,8 +177,8 @@ class Restaurant extends ChangeNotifier {
     //desserts
     Food(
       name: 'cake',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'So sweet and yummy',
+      imagePath: 'lib/images/desserts/download (1).jfif',
       price: 100,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -188,8 +188,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'marble',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'Comes with nice taste',
+      imagePath: 'lib/images/desserts/download (2).jfif',
       price: 100,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -199,8 +199,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'vanilla cream',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'who doesnt love vanilla',
+      imagePath: 'lib/images/desserts/download (3).jfif',
       price: 100,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -210,8 +210,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'strawbeery toppings',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'The best topping in town',
+      imagePath: 'lib/images/desserts/download (4).jfif',
       price: 100,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -221,8 +221,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'mouth watering',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'You definitely gonna want more',
+      imagePath: 'lib/images/desserts/download.jfif',
       price: 100,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -233,9 +233,9 @@ class Restaurant extends ChangeNotifier {
 
     //drinks
     Food(
-      name: 'makali',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      name: 'Fanta Black',
+      description: 'Cold nice fanta blackarrent',
+      imagePath: 'lib/images/drinks/download (1).jfif',
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -244,9 +244,9 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
     Food(
-      name: 'cocktail',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      name: 'Makali',
+      description: 'Makali ziko best sio za mtaa',
+      imagePath: 'lib/images/drinks/download (2).jfif',
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -256,8 +256,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'softdrinks',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'different cocktails',
+      imagePath: 'lib/images/drinks/download (5).jfif',
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -267,8 +267,8 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'juice',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      description: 'Every taste we got you',
+      imagePath: 'lib/images/drinks/download.jfif',
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -277,9 +277,9 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
     Food(
-      name: 'creamy',
-      description: 'chapo imekatatanishwa smart',
-      imagePath: 'lib/images/dishi/download (3).jfif',
+      name: 'Thirst Quenching',
+      description: 'So cold youll love it',
+      imagePath: 'lib/images/drinks/images.jfif',
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
