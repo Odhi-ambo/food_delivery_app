@@ -46,7 +46,7 @@ class FoodTile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
                     food.imagePath,
-                    height: 120,
+                    height: 100,
                   ),
                 ),
               ],
