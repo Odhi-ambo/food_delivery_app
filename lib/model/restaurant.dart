@@ -74,7 +74,7 @@ class Restaurant extends ChangeNotifier {
     ),
     Food(
       name: 'House delicacy',
-      description: 'You' + 'll love it',
+      description: 'You' 'll love it',
       imagePath: 'lib/images/salads/download (2).jfif',
       price: 100,
       category: FoodCategory.salads,
