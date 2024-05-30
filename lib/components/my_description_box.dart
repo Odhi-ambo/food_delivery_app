@@ -6,14 +6,14 @@ class MyDescriptionBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myPrimaryTextStyle =
-        TextStyle(color: Theme.of(context).colorScheme.onBackground);
+        TextStyle(color: Theme.of(context).colorScheme.inversePrimary);
 
     var mySecondaryTextStyle =
         TextStyle(color: Theme.of(context).colorScheme.primary);
 
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
