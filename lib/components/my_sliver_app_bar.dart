@@ -22,7 +22,7 @@ class MySliverAppBar extends StatelessWidget {
           onPressed: () {},
         ),
       ],
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: const Center(child: Text('Place Your Order Now')),
       flexibleSpace: FlexibleSpaceBar(
