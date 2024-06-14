@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 
 class FoodPage extends StatefulWidget {
   final Food food;
-  const FoodPage({super.key, required this.food});
+  final Map<Addon, bool> selectedAddons = {};
+  FoodPage({super.key, required this.food}) {
+    for (Addon addon in food.availableAddons) {
+      selectedAddons[addon] = false;
+    }
+  }
 
   @override
   State<FoodPage> createState() => _FoodPageState();
