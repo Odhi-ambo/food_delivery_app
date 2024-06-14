@@ -85,7 +85,7 @@ class _FoodPageState extends State<FoodPage> {
                             title: Text(addon.name),
                             subtitle:
                                 Text('kshs ' + addon.price.toString() + '/='),
-                            value: false,
+                            value: widget.selectedAddons[addon],
                             onChanged: (value) {},
                           );
                         }),
