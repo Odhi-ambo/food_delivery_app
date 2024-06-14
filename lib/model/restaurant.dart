@@ -12,6 +12,7 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
+        Addon(name: 'Firiri', price: 10),
         Addon(name: 'Firiri', price: 10)
       ],
     ),
@@ -23,7 +24,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -34,6 +36,7 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
+        Addon(name: 'Firiri', price: 10),
         Addon(name: 'Firiri', price: 10)
       ],
     ),
@@ -46,7 +49,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -57,7 +61,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.dishi,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     //salads
@@ -69,7 +74,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -80,7 +86,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -91,7 +98,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -102,7 +110,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -113,7 +122,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.salads,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
 
@@ -126,7 +136,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -137,7 +148,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -148,7 +160,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -159,7 +172,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -170,7 +184,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.sides,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
 
@@ -183,7 +198,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -194,7 +210,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -205,7 +222,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -216,7 +234,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
     Food(
@@ -227,7 +246,8 @@ class Restaurant extends ChangeNotifier {
       category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Firiri', price: 10),
+        Addon(name: 'Firiri', price: 10),
       ],
     ),
 
@@ -239,8 +259,9 @@ class Restaurant extends ChangeNotifier {
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Water', price: 20),
+        Addon(name: 'Ice', price: 10),
+        Addon(name: 'Soda', price: 10),
       ],
     ),
     Food(
@@ -250,8 +271,9 @@ class Restaurant extends ChangeNotifier {
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Water', price: 20),
+        Addon(name: 'Ice', price: 10),
+        Addon(name: 'Soda', price: 10),
       ],
     ),
     Food(
@@ -261,8 +283,9 @@ class Restaurant extends ChangeNotifier {
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Water', price: 20),
+        Addon(name: 'Ice', price: 10),
+        Addon(name: 'Soda', price: 10),
       ],
     ),
     Food(
@@ -272,8 +295,9 @@ class Restaurant extends ChangeNotifier {
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Water', price: 20),
+        Addon(name: 'Ice', price: 10),
+        Addon(name: 'Soda', price: 10),
       ],
     ),
     Food(
@@ -283,8 +307,9 @@ class Restaurant extends ChangeNotifier {
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(name: 'Avocado', price: 20),
-        Addon(name: 'Firiri', price: 10)
+        Addon(name: 'Water', price: 20),
+        Addon(name: 'Ice', price: 10),
+        Addon(name: 'Soda', price: 10),
       ],
     ),
   ];
