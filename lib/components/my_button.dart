@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // ignore: must_be_immutable
 class MyButton extends StatelessWidget {
@@ -14,6 +15,7 @@ class MyButton extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         margin: const EdgeInsets.symmetric(horizontal: 25.0),
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
           color: Theme.of(context).colorScheme.secondary,
         ),
         child: Center(
