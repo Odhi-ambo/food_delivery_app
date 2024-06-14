@@ -32,12 +32,13 @@ class _FoodPageState extends State<FoodPage> {
                   //food name
                   Text(
                     widget.food.name,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
                   ),
 
                   //food price
                   Text(
-                    'kshs ' + widget.food.price.toString() + '/=',
+                    'kshs ${widget.food.price}/=',
                     style: TextStyle(
                         fontSize: 16,
                         color: Theme.of(context).colorScheme.primary),
@@ -83,10 +84,13 @@ class _FoodPageState extends State<FoodPage> {
 
                           return CheckboxListTile(
                             title: Text(addon.name),
-                            subtitle:
-                                Text('kshs ' + addon.price.toString() + '/='),
+                            subtitle: Text('kshs ${addon.price}/='),
                             value: widget.selectedAddons[addon],
-                            onChanged: (value) {},
+                            onChanged: (bool? value) {
+                              setState(() {
+                                widget.selectedAddons[addon] = value!;
+                              });
+                            },
                           );
                         }),
                   ),
