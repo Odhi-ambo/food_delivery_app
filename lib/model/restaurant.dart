@@ -317,8 +317,11 @@ class Restaurant extends ChangeNotifier {
   //getters
   //List<Food> get menu => _menu;
 
-  //operations
+  //OPERATIONS
+//user cart
+
   //add to cart
+  void addToCart(Food food, List<Addon> selectedAddons) {}
   //remove from cart
   //get total price of cart
   //get total number of items in cart
