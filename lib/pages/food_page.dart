@@ -21,7 +21,7 @@ class _FoodPageState extends State<FoodPage> {
     return Stack(
       children: [
         Scaffold(
-          //appBar: AppBar(),
+          appBar: AppBar(),
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -108,6 +108,8 @@ class _FoodPageState extends State<FoodPage> {
             ),
           ),
         ),
+        //unnecessary
+        /*
         SafeArea(
           child: Container(
             decoration:
@@ -116,7 +118,7 @@ class _FoodPageState extends State<FoodPage> {
                 icon: Icon(Icons.arrow_back_ios_new_rounded),
                 onPressed: () => Navigator.pop(context)),
           ),
-        )
+        )*/
       ],
     );
   }
