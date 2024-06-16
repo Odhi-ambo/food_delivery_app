@@ -1,3 +1,4 @@
+import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/food.dart';
 import 'package:flutter/material.dart';
 
@@ -319,15 +320,18 @@ class Restaurant extends ChangeNotifier {
 
   //OPERATIONS
 //user cart
+  final List<CartItem> _cart = [];
 
   //add to cart
-  void addToCart(Food food, List<Addon> selectedAddons) {}
+  void addToCart(Food food, List<Addon> selectedAddons) {
+    CartItem? cartItem = _cart.firstWherseOrNull((element) => false);
+  }
   //remove from cart
-  //get total price of cart
+  //get total price ofL cart
   //get total number of items in cart
   //clear cart
 
-  //helpers:
+  //helpers:S
   //generate a receipt
   //format double value into money
   //format list of addons into a string
