@@ -347,6 +347,11 @@ class Restaurant extends ChangeNotifier {
   //remove from cart
 void removeFromCart(CartItem cartItem){
   int cartIndex = _cart.indexOf(cartItem);
+
+  if (cartIndex != -1){
+    _cart[cartIndex].quantity--;
+  }else
+  _cart.removeAt(cartIndex);
 }
 
   //get total price ofL cart
