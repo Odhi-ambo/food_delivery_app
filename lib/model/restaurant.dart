@@ -327,32 +327,29 @@ class Restaurant extends ChangeNotifier {
   void addToCart(Food food, List<Addon> selectedAddons) {
     CartItem? cartItem = _cart.firstWhereOrNull((item) {
       bool isSameFood = item.food == food;
-
-      bool isSameAddons = const ListEquality().equals(item.selectedAddons, selectedAddons);
+      bool isSameAddons =
+          const ListEquality().equals(item.selectedAddons, selectedAddons);
       return isSameFood && isSameAddons;
+    });
 
-    }
-    );
-
-    if (cartItem != null){
-      cartItem.quantity**;
-    }
-
-    else{
-      _cart.add(CartItem(food: food, selectedAddons: selectedAddons,),
-      );
+    if (cartItem != null) {
+      cartItem.quantity++;
+    } else {
+      _cart.add(CartItem(food: food, selectedAddons: selectedAddons));
     }
     notifyListeners();
-    }
-  //remove from cart
-void removeFromCart(CartItem cartItem){
-  int cartIndex = _cart.indexOf(cartItem);
+  }
 
-  if (cartIndex != -1){
-    _cart[cartIndex].quantity--;
-  }else
-  _cart.removeAt(cartIndex);
-}
+  //remove from cart
+  void removeFromCart(CartItem cartItem) {
+    int cartIndex = _cart.indexOf(cartItem);
+
+    if (cartIndex != -1) {
+      _cart[cartIndex].quantity--;
+    } else {
+      _cart.removeAt(cartIndex);
+    }
+  }
 
   //get total price ofL cart
   //get total number of items in cart
