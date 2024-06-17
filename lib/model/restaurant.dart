@@ -328,12 +328,25 @@ class Restaurant extends ChangeNotifier {
     CartItem? cartItem = _cart.firstWhereOrNull((item) {
       bool isSameFood = item.food == food;
 
-      bool isSameAddons = ListEquality().equals(item.selectedAddons, selectedAddons);
+      bool isSameAddons = const ListEquality().equals(item.selectedAddons, selectedAddons);
       return isSameFood && isSameAddons;
 
     }
     );
+
+    if (cartItem != null){
+      cartItem.quantity**;
+    }
+
+    else{
+      _cart.add(CartItem(food: food, selectedAddons: selectedAddons,),
+      );
+    }
+    notifyListeners();
+    }
   //remove from cart
+
+  
   //get total price ofL cart
   //get total number of items in cart
   //clear cart
