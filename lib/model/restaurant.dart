@@ -345,8 +345,10 @@ class Restaurant extends ChangeNotifier {
     notifyListeners();
     }
   //remove from cart
+void removeFromCart(CartItem cartItem){
+  int cartIndex = _cart.indexOf(cartItem);
+}
 
-  
   //get total price ofL cart
   //get total number of items in cart
   //clear cart
