@@ -9,6 +9,7 @@ class CartItem {
     required this.food,
     required this.selectedAddons,
     this.quantity = 1,
+    required List<Addon> addons,
   });
 
   double get totalPrice {
