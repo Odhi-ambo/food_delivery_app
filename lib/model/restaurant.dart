@@ -349,9 +349,12 @@ class Restaurant extends ChangeNotifier {
     } else {
       _cart.removeAt(cartIndex);
     }
+    notifyListeners();
   }
 
   //get total price ofL cart
+
+  //get total number of items in cart
   int getTotalItemCount() {
     int totalItemCount = 0;
     for (CartItem cartItem in _cart) {
@@ -359,8 +362,12 @@ class Restaurant extends ChangeNotifier {
     }
     return totalItemCount;
   }
-  //get total number of items in cart
+
   //clear cart
+  void clearCart() {
+    _cart.clear();
+    notifyListeners();
+  }
 
   //helpers:S
   //generate a receipt
