@@ -353,6 +353,20 @@ class Restaurant extends ChangeNotifier {
   }
 
   //get total price ofL cart
+  double getTotalPrice() {
+    double total = 0.0;
+
+    for (CartItem cartItem in _cart) {
+      double itemTotal = cartItem.food.price as double;
+
+      for (Addon addon in cartItem.selectedAddons) {
+        itemTotal += addon.price;
+      }
+
+      total += itemTotal * cartItem.quantity;
+    }
+    return total;
+  }
 
   //get total number of items in cart
   int getTotalItemCount() {
