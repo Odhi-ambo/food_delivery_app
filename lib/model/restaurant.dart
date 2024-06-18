@@ -335,7 +335,8 @@ class Restaurant extends ChangeNotifier {
     if (cartItem != null) {
       cartItem.quantity++;
     } else {
-      _cart.add(CartItem(food: food, selectedAddons: selectedAddons));
+      _cart.add(
+          CartItem(food: food, selectedAddons: selectedAddons, addons: []));
     }
     notifyListeners();
   }
