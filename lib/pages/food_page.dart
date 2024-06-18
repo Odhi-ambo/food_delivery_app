@@ -21,6 +21,8 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   //method to add food to cart
   void addToCart(Food food, Map<Addon, bool> selectedAddons) {
+    //close the current page
+    Navigator.pop(context);
     //get selected addons
     List<Addon> currentlySelectedAddon = [];
 
