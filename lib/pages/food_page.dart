@@ -1,5 +1,4 @@
 import 'package:delivery_app/components/my_button.dart';
-import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/food.dart';
 import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
