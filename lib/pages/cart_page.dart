@@ -17,20 +17,26 @@ class CartPage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: ListView.builder(
-          itemCount: userCart.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(userCart[index].food.name),
-              subtitle: Text(userCart[index].food.price.toString()),
-              trailing: IconButton(
-                icon: const Icon(Icons.delete),
-                onPressed: () {
-                  restaurant.removeFromCart(userCart[index]);
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: userCart.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(userCart[index].food.name),
+                    subtitle: Text(userCart[index].food.price.toString()),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete),
+                      onPressed: () {
+                        restaurant.removeFromCart(userCart[index]);
+                      },
+                    ),
+                  );
                 },
               ),
-            );
-          },
+            ),
+          ],
         ),
       );
     });
