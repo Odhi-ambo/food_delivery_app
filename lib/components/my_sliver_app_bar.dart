@@ -17,8 +17,8 @@ class MySliverAppBar extends StatelessWidget {
         IconButton(
           icon: const Icon(Icons.shopping_cart_outlined),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => CartPage()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const CartPage()));
           },
         ),
       ],
