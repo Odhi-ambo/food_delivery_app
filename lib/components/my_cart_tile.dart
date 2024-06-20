@@ -1,5 +1,7 @@
 import 'package:delivery_app/model/cart_item.dart';
+import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyCartTile extends StatelessWidget {
   final CartItem cartItem;
@@ -7,6 +9,12 @@ class MyCartTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Consumer<Restaurant>(
+      builder: (context, restaurant, child) => Container(
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
   }
 }
