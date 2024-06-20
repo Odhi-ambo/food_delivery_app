@@ -12,7 +12,13 @@ class MyCartTile extends StatelessWidget {
     return Consumer<Restaurant>(
       builder: (context, restaurant, child) => Container(
         child: Column(
-          children: [],
+          children: [
+            Row(
+              children: [
+                Image.asset(cartItem.food.imagePath),
+              ],
+            )
+          ],
         ),
       ),
     );
