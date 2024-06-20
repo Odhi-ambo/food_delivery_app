@@ -24,9 +24,13 @@ class MyCartTile extends StatelessWidget {
                     width: 130,
                   ),
                 ),
+                const SizedBox(
+                  width: 10,
+                ),
                 //NAME AND PRICE
 
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(cartItem.food.name),
                     Text('kshs ' + cartItem.food.price.toString())
