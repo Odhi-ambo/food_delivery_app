@@ -15,11 +15,23 @@ class MyCartTile extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.asset(
-                  cartItem.food.imagePath,
-                  height: 130,
-                  width: 130,
+                //FOOD IMAGE
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    cartItem.food.imagePath,
+                    height: 130,
+                    width: 130,
+                  ),
                 ),
+                //NAME AND PRICE
+
+                Column(
+                  children: [
+                    Text(cartItem.food.name),
+                    Text('kshs ' + cartItem.food.price.toString())
+                  ],
+                )
               ],
             )
           ],
