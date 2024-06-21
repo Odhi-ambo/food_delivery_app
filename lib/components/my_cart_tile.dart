@@ -72,8 +72,10 @@ class MyCartTile extends StatelessWidget {
                         label: Row(
                           children: [
                             //addon name
+                            Text(addon.name),
 
                             //addon price
+                            Text(addon.price.toString()),
                           ],
                         ),
                         onSelected: (value) {},
