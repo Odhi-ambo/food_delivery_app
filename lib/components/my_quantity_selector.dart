@@ -22,7 +22,9 @@ class MyQuantitySelector extends StatelessWidget {
       ),
       padding: EdgeInsets.all(8),
       child: Row(
-        children: [Icon(Icons.remove)],
+        children: [
+          GestureDetector(onTap: onDecrement, child: Icon(Icons.remove))
+        ],
       ),
     );
   }
