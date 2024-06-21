@@ -19,43 +19,69 @@ class MyCartTile extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Column(
           children: [
-            Row(
-              children: [
-                //FOOD IMAGE
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    cartItem.food.imagePath,
-                    height: 130,
-                    width: 130,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  //FOOD IMAGE
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      cartItem.food.imagePath,
+                      height: 130,
+                      width: 130,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                //NAME AND PRICE
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  //NAME AND PRICE
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(cartItem.food.name),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(cartItem.food.name),
 
-                    //food price
-                    Text('kshs ${cartItem.food.price}'),
-                  ],
-                ),
-                MyQuantitySelector(
-                    food: cartItem.food,
-                    onDecrement: () {
-                      restaurant.removeFromCart(cartItem);
-                    },
-                    onIncrement: () {
-                      restaurant.addToCart(
-                          cartItem.food, cartItem.selectedAddons);
-                    },
-                    quantity: cartItem.quantity)
-              ],
-            )
+                      //food price
+                      Text('kshs ${cartItem.food.price}'),
+                    ],
+                  ),
+                  Spacer(),
+                  MyQuantitySelector(
+                      food: cartItem.food,
+                      onDecrement: () {
+                        restaurant.removeFromCart(cartItem);
+                      },
+                      onIncrement: () {
+                        restaurant.addToCart(
+                            cartItem.food, cartItem.selectedAddons);
+                      },
+                      quantity: cartItem.quantity)
+                ],
+              ),
+            ),
+
+            //addons
+            SizedBox(
+              height: cartItem.selectedAddons.isEmpty ? 0 : 60,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: cartItem.selectedAddons
+                    .map(
+                      (addon) => FilterChip(
+                        label: Row(
+                          children: [
+                            //addon name
+
+                            //addon price
+                          ],
+                        ),
+                        onSelected: (value) {},
+                      ),
+                    )
+                    .toList(),
+              ),
+            ),
           ],
         ),
       ),
