@@ -33,7 +33,7 @@ class MyCartTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(cartItem.food.name),
-                    Text('kshs ' + cartItem.food.price.toString())
+                    Text('kshs ${cartItem.food.price}'),
                   ],
                 )
               ],
