@@ -23,7 +23,14 @@ class MyQuantitySelector extends StatelessWidget {
       padding: EdgeInsets.all(8),
       child: Row(
         children: [
-          GestureDetector(onTap: onDecrement, child: Icon(Icons.remove))
+          //decrease button
+          GestureDetector(
+              onTap: onDecrement,
+              child: Icon(
+                Icons.remove,
+                size: 20,
+                color: Theme.of(context).colorScheme.primary,
+              ))
         ],
       ),
     );
