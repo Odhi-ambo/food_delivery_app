@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:delivery_app/model/food.dart';
 import 'package:flutter/material.dart';
 
