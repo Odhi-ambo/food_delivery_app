@@ -25,12 +25,22 @@ class MyQuantitySelector extends StatelessWidget {
         children: [
           //decrease button
           GestureDetector(
-              onTap: onDecrement,
-              child: Icon(
-                Icons.remove,
-                size: 20,
-                color: Theme.of(context).colorScheme.primary,
-              ))
+            onTap: onDecrement,
+            child: Icon(
+              Icons.remove,
+              size: 20,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+          //quantity count
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: Center(
+              child: Text(
+                quantity.toString(),
+              ),
+            ),
+          )
         ],
       ),
     );
