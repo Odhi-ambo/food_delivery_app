@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/my_quantity_selector.dart';
 import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
@@ -33,9 +34,21 @@ class MyCartTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(cartItem.food.name),
+
+                    //food price
                     Text('kshs ${cartItem.food.price}'),
                   ],
-                )
+                ),
+                MyQuantitySelector(
+                    food: cartItem.food,
+                    onDecrement: () {
+                      restaurant.removeFromCart(cartItem);
+                    },
+                    onIncrement: () {
+                      restaurant.addToCart(
+                          cartItem.food, cartItem.selectedAddons);
+                    },
+                    quantity: cartItem.quantity)
               ],
             )
           ],
