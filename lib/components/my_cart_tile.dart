@@ -12,6 +12,10 @@ class MyCartTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<Restaurant>(
       builder: (context, restaurant, child) => Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.secondary,
+          borderRadius: BorderRadius.circular(8),
+        ),
         child: Column(
           children: [
             Row(
