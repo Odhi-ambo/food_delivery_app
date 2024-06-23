@@ -53,23 +53,27 @@ class CartPage extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Expanded(
-                child: ListView.builder(
-                  itemCount: userCart.length,
-                  itemBuilder: (context, index) {
-                    final cartItem = userCart[index];
-                    return MyCartTile(
-                        cartItem:
-                            cartItem); /*ListTile(
+              userCart.isEmpty
+                  ? const Expanded(
+                      child: Text('Cart is Empty..'),
+                    )
+                  : Expanded(
+                      child: ListView.builder(
+                        itemCount: userCart.length,
+                        itemBuilder: (context, index) {
+                          final cartItem = userCart[index];
+                          return MyCartTile(
+                              cartItem:
+                                  cartItem); /*ListTile(
                     title: Text(userCart[index].food.name),
                     subtitle: Text(userCart[index].food.price.toString()),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () {
                         restaurant.removeFromCart(userCart[index]);*/
-                  },
-                ),
-              ),
+                        },
+                      ),
+                    ),
             ],
           ),
         );
