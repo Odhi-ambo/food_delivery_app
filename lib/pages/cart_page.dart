@@ -24,14 +24,14 @@ class CartPage extends StatelessWidget {
                 onPressed: () {
                   showDialog(
                     context: context,
-                    builder: (context) => const AlertDialog(
+                    builder: (context) => AlertDialog(
                       title: Text('Are you sure you want clear the cart?'),
                       actions: [
                         //cancel button
                         TextButton(
                           onPressed: () {},
-                          child: Text('Cancel'),
-                        )
+                          child: const Text('Cancel'),
+                        ),
                       ],
                     ),
                   );
