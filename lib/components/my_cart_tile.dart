@@ -43,7 +43,11 @@ class MyCartTile extends StatelessWidget {
                       Text(cartItem.food.name),
 
                       //food price
-                      Text('kshs ${cartItem.food.price}'),
+                      Text(
+                        'kshs ${cartItem.food.price.toInt()}',
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary),
+                      ),
                     ],
                   ),
                   Spacer(),
