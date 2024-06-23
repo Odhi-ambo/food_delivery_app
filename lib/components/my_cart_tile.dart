@@ -22,6 +22,7 @@ class MyCartTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //FOOD IMAGE
                   ClipRRect(
