@@ -18,6 +18,20 @@ class CartPage extends StatelessWidget {
             title: const Text('Cart'),
             backgroundColor: Colors.transparent,
             foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+            actions: [
+              //clear cart
+              IconButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text('Are you sure you want clear the cart?'),
+                    ),
+                  );
+                },
+                icon: Icon(Icons.delete),
+              )
+            ],
           ),
           body: Column(
             children: [
