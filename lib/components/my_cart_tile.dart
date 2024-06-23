@@ -50,7 +50,7 @@ class MyCartTile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   MyQuantitySelector(
                       food: cartItem.food,
                       onDecrement: () {
