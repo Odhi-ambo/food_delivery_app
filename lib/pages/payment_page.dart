@@ -12,6 +12,9 @@ class _PaymentPageState extends State<PaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
     );
   }
 }
