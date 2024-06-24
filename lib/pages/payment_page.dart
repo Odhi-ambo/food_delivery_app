@@ -14,6 +14,7 @@ class _PaymentPageState extends State<PaymentPage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        title: const Center(child: Text('Payment')),
       ),
     );
   }
