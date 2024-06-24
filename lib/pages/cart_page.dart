@@ -82,7 +82,11 @@ class CartPage extends StatelessWidget {
                   ],
                 ),
               ),
-              MyButton(onTap: () {}, text: 'GO TO CHECKOUT'),
+              MyButton(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/payment');
+                  },
+                  text: 'GO TO CHECKOUT'),
               const SizedBox(
                 height: 25,
               )
