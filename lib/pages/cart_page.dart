@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/my_button.dart';
 import 'package:delivery_app/components/my_cart_tile.dart';
 import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
@@ -54,27 +55,32 @@ class CartPage extends StatelessWidget {
           ),
           body: Column(
             children: [
-              userCart.isEmpty
-                  ? const Expanded(
-                      child: Center(child: Text('Cart is Empty..')),
-                    )
-                  : Expanded(
-                      child: ListView.builder(
-                        itemCount: userCart.length,
-                        itemBuilder: (context, index) {
-                          final cartItem = userCart[index];
-                          return MyCartTile(
-                              cartItem:
-                                  cartItem); /*ListTile(
-                    title: Text(userCart[index].food.name),
-                    subtitle: Text(userCart[index].food.price.toString()),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.delete),
-                      onPressed: () {
-                        restaurant.removeFromCart(userCart[index]);*/
-                        },
-                      ),
-                    ),
+              Column(
+                children: [
+                  userCart.isEmpty
+                      ? const Expanded(
+                          child: Center(child: Text('Cart is Empty..')),
+                        )
+                      : Expanded(
+                          child: ListView.builder(
+                            itemCount: userCart.length,
+                            itemBuilder: (context, index) {
+                              final cartItem = userCart[index];
+                              return MyCartTile(
+                                  cartItem:
+                                      cartItem); /*ListTile(
+                        title: Text(userCart[index].food.name),
+                        subtitle: Text(userCart[index].food.price.toString()),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.delete),
+                          onPressed: () {
+                            restaurant.removeFromCart(userCart[index]);*/
+                            },
+                          ),
+                        ),
+                ],
+              ),
+              MyButton(onTap: () {}, text: 'GO TO CHECKOUT')
             ],
           ),
         );
