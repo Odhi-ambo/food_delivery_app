@@ -1,6 +1,7 @@
 import 'package:delivery_app/components/my_button.dart';
 import 'package:delivery_app/components/my_cart_tile.dart';
 import 'package:delivery_app/model/restaurant.dart';
+import 'package:delivery_app/pages/payment_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -84,7 +85,8 @@ class CartPage extends StatelessWidget {
               ),
               MyButton(
                   onTap: () {
-                    Navigator.pushNamed(context, '/payment');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PaymentPage()));
                   },
                   text: 'GO TO CHECKOUT'),
               const SizedBox(
