@@ -24,11 +24,13 @@ class _PaymentPageState extends State<PaymentPage> {
       //only show dialog if from is valid
       showDialog(
           context: context,
-          builder: (context) => const AlertDialog(
-                title: Text('Confirm Payment'),
+          builder: (context) => AlertDialog(
+                title: const Text('Confirm Payment'),
                 content: SingleChildScrollView(
                   child: ListBody(
-                    children: [],
+                    children: [
+                      Text("Card Number: $cardNumber"),
+                    ],
                   ),
                 ),
               ));
