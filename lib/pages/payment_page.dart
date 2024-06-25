@@ -40,7 +40,14 @@ class _PaymentPageState extends State<PaymentPage> {
               expiryDate: expiryDate,
               cardHolderName: cardHolderName,
               cvvCode: cvvCode,
-              onCreditCardModelChange: (p0) {},
+              onCreditCardModelChange: (data) {
+                setState(() {
+                  cardNumber = data.cardNumber;
+                  expiryDate = data.expiryDate;
+                  cardHolderName = data.cardHolderName;
+                  cvvCode = data.cvvCode;
+                });
+              },
               formKey: formKey)
         ],
       ),
