@@ -26,6 +26,11 @@ class _PaymentPageState extends State<PaymentPage> {
           context: context,
           builder: (context) => const AlertDialog(
                 title: Text('Confirm Payment'),
+                content: SingleChildScrollView(
+                  child: ListBody(
+                    children: [],
+                  ),
+                ),
               ));
     }
   }
