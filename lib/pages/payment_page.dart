@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
@@ -48,7 +49,15 @@ class _PaymentPageState extends State<PaymentPage> {
                   cvvCode = data.cvvCode;
                 });
               },
-              formKey: formKey)
+              formKey: formKey),
+          const Spacer(),
+          MyButton(
+            onTap: () {},
+            text: 'Pay Now',
+          ),
+          const SizedBox(
+            height: 25,
+          )
         ],
       ),
     );
