@@ -17,6 +17,19 @@ class _PaymentPageState extends State<PaymentPage> {
   String cvvCode = '';
   bool isCvvFocused = false;
 
+  //user wants to pay
+
+  void userTappedPay() {
+    if (formKey.currentState!.validate()) {
+      //only show dialog if from is valid
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: Text('Confirm Payment'),
+              ));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
