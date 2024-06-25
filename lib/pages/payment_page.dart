@@ -30,6 +30,9 @@ class _PaymentPageState extends State<PaymentPage> {
                   child: ListBody(
                     children: [
                       Text("Card Number: $cardNumber"),
+                      Text("Expiry Date: $expiryDate"),
+                      Text("Card Holder Name: $cardHolderName"),
+                      Text("CVV: $cvvCode"),
                     ],
                   ),
                 ),
