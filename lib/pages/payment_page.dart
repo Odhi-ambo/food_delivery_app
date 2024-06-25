@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -9,6 +10,7 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String cardNumber = '';
   String expiryDate = '';
   String cardHolderName = '';
