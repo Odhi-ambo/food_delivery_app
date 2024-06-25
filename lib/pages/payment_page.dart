@@ -24,7 +24,7 @@ class _PaymentPageState extends State<PaymentPage> {
       //only show dialog if from is valid
       showDialog(
           context: context,
-          builder: (context) => AlertDialog(
+          builder: (context) => const AlertDialog(
                 title: Text('Confirm Payment'),
               ));
     }
