@@ -23,20 +23,25 @@ class _PaymentPageState extends State<PaymentPage> {
     if (formKey.currentState!.validate()) {
       //only show dialog if from is valid
       showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-                title: const Text('Confirm Payment'),
-                content: SingleChildScrollView(
-                  child: ListBody(
-                    children: [
-                      Text("Card Number: $cardNumber"),
-                      Text("Expiry Date: $expiryDate"),
-                      Text("Card Holder Name: $cardHolderName"),
-                      Text("CVV: $cvvCode"),
-                    ],
-                  ),
-                ),
-              ));
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Confirm Payment'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                Text("Card Number: $cardNumber"),
+                Text("Expiry Date: $expiryDate"),
+                Text("Card Holder Name: $cardHolderName"),
+                Text("CVV: $cvvCode"),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+                onPressed: () => Navigator.pop(context), child: Text('Cancel'))
+          ],
+        ),
+      );
     }
   }
 
