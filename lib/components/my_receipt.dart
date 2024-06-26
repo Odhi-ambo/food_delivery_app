@@ -17,9 +17,10 @@ class MyReceipt extends StatelessWidget {
           const Text('Thank you for your order!'),
           Container(
             decoration: BoxDecoration(
-                border:
-                    Border.all(color: Theme.of(context).colorScheme.surface),
-                borderRadius: BorderRadius.circular(8)),
+              border: Border.all(color: Theme.of(context).colorScheme.surface),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            padding: EdgeInsets.all(25),
             child: const Text("Receipt Here..."),
           )
         ],
