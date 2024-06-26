@@ -1,4 +1,5 @@
 import 'package:delivery_app/components/my_button.dart';
+import 'package:delivery_app/pages/delivery_progress_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
@@ -38,8 +39,17 @@ class _PaymentPageState extends State<PaymentPage> {
           ),
           actions: [
             TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('Cancel'))
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DeliveryProgressPage(),
+                      ),
+                    ),
+                child: const Text('Yes'))
           ],
         ),
       );
@@ -84,7 +94,7 @@ class _PaymentPageState extends State<PaymentPage> {
               ),
               const SizedBox(height: 25),
               MyButton(
-                onTap: () {},
+                onTap: userTappedPay,
                 text: 'Pay Now',
               ),
               const SizedBox(height: 25),
