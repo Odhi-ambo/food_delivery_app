@@ -7,7 +7,7 @@ class DeliveryProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Delivery in progress'),
+        title: const Text('Delivery in progress'),
         backgroundColor: Colors.transparent,
       ),
     );
