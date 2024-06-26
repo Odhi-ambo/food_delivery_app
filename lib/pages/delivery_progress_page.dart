@@ -8,6 +8,7 @@ class DeliveryProgressPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Delivery in progress'),
+        backgroundColor: Colors.transparent,
       ),
     );
   }
