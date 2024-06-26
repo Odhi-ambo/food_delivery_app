@@ -18,7 +18,8 @@ class MyReceipt extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 border:
-                    Border.all(color: Theme.of(context).colorScheme.surface)),
+                    Border.all(color: Theme.of(context).colorScheme.surface),
+                borderRadius: BorderRadius.circular(8)),
             child: const Text("Receipt Here..."),
           )
         ],
