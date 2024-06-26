@@ -390,5 +390,9 @@ class Restaurant extends ChangeNotifier {
   String _formatPrice(double price) {
     return "kshs  {price.toStringAsFixed(2)}";
   }
+
   //format list of addons into a string
+  String _formatAddons(List<Addon> addons) {
+    return addons.map((addon) => "kshs${addon.name}").join(",");
+  }
 }
