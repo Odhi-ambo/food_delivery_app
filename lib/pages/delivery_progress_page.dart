@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/my_receipt.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryProgressPage extends StatelessWidget {
@@ -9,6 +10,9 @@ class DeliveryProgressPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Delivery in progress'),
         backgroundColor: Colors.transparent,
+      ),
+      body: Column(
+        children: [MyReceipt()],
       ),
     );
   }
