@@ -13,6 +13,7 @@ class MyReceipt extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Thank you for your order!'),
             const SizedBox(
