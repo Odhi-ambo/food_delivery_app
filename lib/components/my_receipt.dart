@@ -5,6 +5,7 @@ class MyReceipt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(left: 25, right: 25, bottom: 25));
+    return const Padding(
+        padding: EdgeInsets.only(left: 25, right: 25, bottom: 25));
   }
 }
