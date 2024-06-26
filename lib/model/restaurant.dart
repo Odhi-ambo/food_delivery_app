@@ -387,5 +387,8 @@ class Restaurant extends ChangeNotifier {
   //helpers:S
   //generate a receipt
   //format double value into money
+  String _formatPrice(double price) {
+    return "kshs  {price.toStringAsFixed(2)}";
+  }
   //format list of addons into a string
 }
