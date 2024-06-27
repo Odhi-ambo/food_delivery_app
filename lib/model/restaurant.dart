@@ -5,6 +5,7 @@ import 'package:collection/collection.dart';
 import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/food.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Restaurant extends ChangeNotifier {
   final List<Food> menu = [
@@ -396,7 +397,8 @@ class Restaurant extends ChangeNotifier {
   }
 
   //format date to include upto seconds only
-  String formattedDate = DateFomart('yyyy-MM-dd HH:mm:ss');
+  String formattedDate =
+      DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
   //format double value into money
   String _formatPrice(double price) {
