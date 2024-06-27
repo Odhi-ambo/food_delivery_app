@@ -1,4 +1,5 @@
 import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
+import 'dart:ui';
 
 import 'package:collection/collection.dart';
 import 'package:delivery_app/model/cart_item.dart';
@@ -390,7 +391,12 @@ class Restaurant extends ChangeNotifier {
   //generate a receipt
   String displayCartReceipt() {
     final receipt = StringBuffer();
+    receipt.writeln("Here is your receipt.");
+    receipt.writeln();
   }
+
+  //format date to include upto seconds only
+  String formattedDate = DateFomart('yyyy-MM-dd HH:mm:ss');
 
   //format double value into money
   String _formatPrice(double price) {
