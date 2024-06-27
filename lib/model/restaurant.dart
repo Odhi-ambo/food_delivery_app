@@ -1,3 +1,5 @@
+import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
+
 import 'package:collection/collection.dart';
 import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/food.dart';
@@ -386,6 +388,10 @@ class Restaurant extends ChangeNotifier {
 
   //helpers:S
   //generate a receipt
+  String displayCartReceipt() {
+    final receipt = StringBuffer();
+  }
+
   //format double value into money
   String _formatPrice(double price) {
     return "kshs  {price.toStringAsFixed(2)}";
