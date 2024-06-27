@@ -1,6 +1,6 @@
-import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
-import 'dart:ui';
-
+import 'dart:core';
+//import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
+import 'dart:core' as core;
 import 'package:collection/collection.dart';
 import 'package:delivery_app/model/cart_item.dart';
 import 'package:delivery_app/model/food.dart';
