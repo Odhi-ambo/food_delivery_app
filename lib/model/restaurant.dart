@@ -394,21 +394,32 @@ class Restaurant extends ChangeNotifier {
     final receipt = StringBuffer();
     receipt.writeln("Here is your receipt.");
     receipt.writeln();
+
+    for(final cartItem in _cart){
+      receipt.writeln(
+        "${cartItem.quantity}x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}");
+      if(cartItem.selectedAddons.isNotEmpty){
+        receipt.writeln("Addons: ${_formatAddons(cartItem.selectedAddons)}");
+      }
+      receipt.writeln();
+
+    }
   }
 
-  //format date to include upto seconds only
-  String formattedDate =
-      DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+    //format date to include upto seconds only
+    String formattedDate =
+        DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
-  //format double value into money
-  String _formatPrice(double price) {
-    return "kshs  {price.toStringAsFixed(2)}";
-  }
+    //format double value into money
+    String _formatPrice(double price) {
+      return "kshs  {price.toStringAsFixed(2)}";
+    }
 
-  //format list of addons into a string
-  String _formatAddons(List<Addon> addons) {
-    return addons
-        .map((addon) => "kshs${addon.name}(kshs{_formatPrice(addon.price)})")
-        .join(",");
+    //format list of addons into a string
+    String _formatAddons(List<Addon> addons) {
+      return addons
+          .map((addon) => "kshs${addon.name}(kshs{_formatPrice(addon.price)})")
+          .join(",");
+    }
   }
 }
