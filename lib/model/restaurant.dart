@@ -397,7 +397,7 @@ class Restaurant extends ChangeNotifier {
 
     for(final cartItem in _cart){
       receipt.writeln(
-        "${cartItem.quantity}x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}");
+        "${cartItem.quantity}x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price.toDouble())}");
       if(cartItem.selectedAddons.isNotEmpty){
         receipt.writeln("Addons: ${_formatAddons(cartItem.selectedAddons)}");
       }
