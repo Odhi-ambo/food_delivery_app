@@ -404,7 +404,15 @@ class Restaurant extends ChangeNotifier {
       receipt.writeln();
 
     }
+  receipt.writeln("----------");
+  receipt.writeln();
+  receipt.writeln("total items: ${getTotalItemCount()}");
+  receipt.writeln("total price: ${_formatPrice(getTotalPrice())}");
+  
+  return receipt.toString();
   }
+ 
+
 
     //format date to include upto seconds only
     String formattedDate =
