@@ -395,39 +395,35 @@ class Restaurant extends ChangeNotifier {
     receipt.writeln("Here is your receipt.");
     receipt.writeln();
 
-    for(final cartItem in _cart){
+    for (final cartItem in _cart) {
       receipt.writeln(
-        "${cartItem.quantity}x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price.toDouble())}");
-      if(cartItem.selectedAddons.isNotEmpty){
+          "${cartItem.quantity}x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price.toDouble())}");
+      if (cartItem.selectedAddons.isNotEmpty) {
         receipt.writeln("Addons: ${_formatAddons(cartItem.selectedAddons)}");
       }
       receipt.writeln();
-
     }
-  receipt.writeln("----------");
-  receipt.writeln();
-  receipt.writeln("total items: ${getTotalItemCount()}");
-  receipt.writeln("total price: ${_formatPrice(getTotalPrice())}");
-  
-  return receipt.toString();
+    receipt.writeln("----------");
+    receipt.writeln();
+    receipt.writeln("total items: ${getTotalItemCount()}");
+    receipt.writeln("total price: ${_formatPrice(getTotalPrice())}");
+
+    return receipt.toString();
   }
- 
 
+  //format date to include upto seconds only
+  String formattedDate =
+      DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
-    //format date to include upto seconds only
-    String formattedDate =
-        DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+  //format double value into money
+  String _formatPrice(double price) {
+    return "kshs  {price.toStringAsFixed(2)}";
+  }
 
-    //format double value into money
-    String _formatPrice(double price) {
-      return "kshs  {price.toStringAsFixed(2)}";
-    }
-
-    //format list of addons into a string
-    String _formatAddons(List<Addon> addons) {
-      return addons
-          .map((addon) => "kshs${addon.name}(kshs{_formatPrice(addon.price)})")
-          .join(",");
-    }
+  //format list of addons into a string
+  String _formatAddons(List<Addon> addons) {
+    return addons
+        .map((addon) => "kshs${addon.name}(kshs{_formatPrice(addon.price)})")
+        .join(",");
   }
 }
