@@ -1,3 +1,4 @@
+import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
 
 class MyReceipt extends StatelessWidget {
@@ -20,14 +21,13 @@ class MyReceipt extends StatelessWidget {
               height: 25,
             ),
             Container(
-              decoration: BoxDecoration(
-                border:
-                    Border.all(color: Theme.of(context).colorScheme.surface),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              padding: const EdgeInsets.all(25),
-              child: const Text("Receipt Here..."),
-            )
+                decoration: BoxDecoration(
+                  border:
+                      Border.all(color: Theme.of(context).colorScheme.surface),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(25),
+                child: Consumer<Restaurant>(Builder: (context, Restaurant())))
           ],
         ),
       ),
