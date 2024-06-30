@@ -1,5 +1,6 @@
 import 'package:delivery_app/model/restaurant.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyReceipt extends StatelessWidget {
   const MyReceipt({super.key});
@@ -21,13 +22,16 @@ class MyReceipt extends StatelessWidget {
               height: 25,
             ),
             Container(
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: Theme.of(context).colorScheme.surface),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                padding: const EdgeInsets.all(25),
-                child: Consumer<Restaurant>(Builder: (context, Restaurant())))
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: Theme.of(context).colorScheme.surface),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: const EdgeInsets.all(25),
+              child: Consumer<Restaurant>(
+                  builder: (context, restaurant, child) =>
+                      Text(restaurant.displayCartReceipt())),
+            ),
           ],
         ),
       ),
