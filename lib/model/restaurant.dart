@@ -362,7 +362,7 @@ class Restaurant extends ChangeNotifier {
     double total = 0.0;
 
     for (CartItem cartItem in _cart) {
-      double itemTotal = cartItem.food.price as double;
+      double itemTotal = cartItem.food.price.toDouble();
 
       for (Addon addon in cartItem.selectedAddons) {
         itemTotal += addon.price;
@@ -423,7 +423,7 @@ class Restaurant extends ChangeNotifier {
   //format list of addons into a string
   String _formatAddons(List<Addon> addons) {
     return addons
-        .map((addon) => "kshs${addon.name}(kshs{_formatPrice(addon.price)})")
+        .map((addon) => "kshs${addon.name}(${_formatPrice(addon.price)})")
         .join(",");
   }
 }
