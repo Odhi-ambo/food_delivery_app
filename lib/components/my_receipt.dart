@@ -37,6 +37,9 @@ class MyReceipt extends StatelessWidget {
               height: 25,
             ),
             const Text('Your order will be ready in 20 minutes.'),
+            const SizedBox(
+              height: 25,
+            ),
             const Text('Enjoy your meal!')
           ],
         ),
