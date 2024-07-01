@@ -393,6 +393,7 @@ class Restaurant extends ChangeNotifier {
   String displayCartReceipt() {
     final receipt = StringBuffer();
     receipt.writeln("Here is your receipt.");
+    receipt.writeln("----------");
     receipt.writeln("Date: $formattedDate");
     receipt.writeln();
 
