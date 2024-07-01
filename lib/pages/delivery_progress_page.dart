@@ -21,6 +21,9 @@ class DeliveryProgressPage extends StatelessWidget {
 
   //custom bottom nva bar
   Widget _buildBottomNavBar(BuildContext context) {
-    return Container();
+    return Container(
+      height: 100,
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.secondary),
+    );
   }
 }
