@@ -416,8 +416,9 @@ class Restaurant extends ChangeNotifier {
       DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
   //format double value into money
+  // format double value into money
   String _formatPrice(double price) {
-    return "kshs  {price.toStringAsFixed(2)}";
+    return "kshs ${price.toStringAsFixed(2)}";
   }
 
   //format list of addons into a string
