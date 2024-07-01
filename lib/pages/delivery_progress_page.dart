@@ -17,7 +17,10 @@ class DeliveryProgressPage extends StatelessWidget {
         ),
       ),
     );
-    //custom bottom nva bar
-    Widget _buildBottomNavBar(BuildContext context) {}
+  }
+
+  //custom bottom nva bar
+  Widget _buildBottomNavBar(BuildContext context) {
+    return Container();
   }
 }
