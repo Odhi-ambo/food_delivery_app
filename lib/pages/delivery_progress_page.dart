@@ -11,8 +11,10 @@ class DeliveryProgressPage extends StatelessWidget {
         title: const Center(child: Text('Delivery in progress')),
         backgroundColor: Colors.transparent,
       ),
-      body: const Column(
-        children: [MyReceipt()],
+      body: SingleChildScrollView(
+        child: const Column(
+          children: [MyReceipt()],
+        ),
       ),
     );
   }
