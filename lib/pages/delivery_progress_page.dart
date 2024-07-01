@@ -23,7 +23,10 @@ class DeliveryProgressPage extends StatelessWidget {
   Widget _buildBottomNavBar(BuildContext context) {
     return Container(
       height: 100,
-      decoration: BoxDecoration(color: Theme.of(context).colorScheme.secondary),
+      decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.secondary,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40), topRight: Radius.circular(40))),
     );
   }
 }
