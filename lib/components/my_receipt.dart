@@ -14,34 +14,36 @@ class MyReceipt extends StatelessWidget {
         bottom: 25,
       ),
       child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('Thank you for your order!'),
-            const SizedBox(
-              height: 25,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border:
-                    Border.all(color: Theme.of(context).colorScheme.surface),
-                borderRadius: BorderRadius.circular(8),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Thank you for your order!'),
+              const SizedBox(
+                height: 25,
               ),
-              padding: const EdgeInsets.all(25),
-              child: Consumer<Restaurant>(
-                builder: (context, restaurant, child) =>
-                    Text(restaurant.displayCartReceipt()),
+              Container(
+                decoration: BoxDecoration(
+                  border:
+                      Border.all(color: Theme.of(context).colorScheme.surface),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(25),
+                child: Consumer<Restaurant>(
+                  builder: (context, restaurant, child) =>
+                      Text(restaurant.displayCartReceipt()),
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            const Text('Your order will be ready in 20 minutes.'),
-            const SizedBox(
-              height: 25,
-            ),
-            const Text('Enjoy your meal!')
-          ],
+              const SizedBox(
+                height: 25,
+              ),
+              const Text('Your order will be ready in 20 minutes.'),
+              const SizedBox(
+                height: 25,
+              ),
+              const Text('Enjoy your meal!')
+            ],
+          ),
         ),
       ),
     );
