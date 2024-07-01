@@ -33,8 +33,9 @@ class DeliveryProgressPage extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            decoration:
-                BoxDecoration(color: Theme.of(context).colorScheme.surface),
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+                shape: BoxShape.circle),
           )
         ],
       ),
