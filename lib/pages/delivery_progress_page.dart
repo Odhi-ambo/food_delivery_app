@@ -45,8 +45,17 @@ class DeliveryProgressPage extends StatelessWidget {
           const SizedBox(
             width: 25,
           ),
-          const Column(
-            children: [Text('Mike'), Text('Driver')],
+          Column(
+            children: [
+              Text(
+                'Mike',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Theme.of(context).colorScheme.inversePrimary),
+              ),
+              Text('Driver')
+            ],
           )
         ],
       ),
