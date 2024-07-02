@@ -46,6 +46,7 @@ class DeliveryProgressPage extends StatelessWidget {
             width: 25,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Mike',
