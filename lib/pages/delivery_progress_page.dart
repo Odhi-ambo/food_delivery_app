@@ -31,6 +31,7 @@ class DeliveryProgressPage extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
       ),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
         children: [
           Container(
