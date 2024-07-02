@@ -41,6 +41,12 @@ class DeliveryProgressPage extends StatelessWidget {
               icon: Icon(Icons.person),
               onPressed: () {},
             ),
+          ),
+          const SizedBox(
+            width: 25,
+          ),
+          Column(
+            children: [Text('Mike'), Text('Driver')],
           )
         ],
       ),
