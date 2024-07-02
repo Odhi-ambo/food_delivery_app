@@ -54,7 +54,10 @@ class DeliveryProgressPage extends StatelessWidget {
                     fontSize: 18,
                     color: Theme.of(context).colorScheme.inversePrimary),
               ),
-              Text('Driver')
+              Text(
+                'Driver',
+                style: TextStyle(color: Theme.of(context).colorScheme.primary),
+              )
             ],
           )
         ],
