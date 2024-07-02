@@ -45,7 +45,7 @@ class DeliveryProgressPage extends StatelessWidget {
           const SizedBox(
             width: 25,
           ),
-          Column(
+          const Column(
             children: [Text('Mike'), Text('Driver')],
           )
         ],
