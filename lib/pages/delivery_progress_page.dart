@@ -38,7 +38,7 @@ class DeliveryProgressPage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.surface,
                 shape: BoxShape.circle),
             child: IconButton(
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
               onPressed: () {},
             ),
           ),
