@@ -16,6 +16,7 @@ class DeliveryProgressPage extends StatelessWidget {
           children: [MyReceipt()],
         ),
       ),
+      bottomNavigationBar: _buildBottomNavBar(context),
     );
   }
 
