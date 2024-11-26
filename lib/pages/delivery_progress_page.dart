@@ -60,7 +60,7 @@ class DeliveryProgressPage extends StatelessWidget {
                 'Driver',
                 style: TextStyle(color: Theme.of(context).colorScheme.primary),
               ),
-              const Text('+254 707567890')
+              const Text('+254 707780804')
             ],
           )
         ],
